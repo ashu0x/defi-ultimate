@@ -28,7 +28,7 @@ describe("Stake and Claim Rewards", async function () {
 
   describe("Stake", async function () {
     it("Move token from user to staking contract", async function () {
-      console.log(staking.address, "😁😁😁😁😁");
+      console.log(staking.address);
       await rewardToken.approve(staking.address, stakeAmount);
       await staking.stake(stakeAmount);
       await moveTime(SECONDS_IN_A_YEAR);
