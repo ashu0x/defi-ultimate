@@ -1,0 +1,13 @@
+module.exports = async ({ getNamedAccounts, deployments }) => {
+  const { deploy } = deployments;
+  const { deployer } = await getNamedAccounts();
+  const rewardtoken = await deploy("RewardToken", {
+    from: deployer,
+    args: [],
+    logs: true,
+  });
+};
+
+console.log("Hi");
+
+module.exports.tags = ["all", "rewardToken"];
