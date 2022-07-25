@@ -47,16 +47,16 @@ describe("Optimal Swap", async () => {
     console.log("to", after.toToken.toString());
   });
 
-  //   it("sub optimal swap", async () => {
-  //     console.log(tokenA.address, " A ");
-  //     console.log(tokenB.address, " B ");
-  //     await uniswapOptimal
-  //       .connect(signer)
-  //       .subOptimalZap(tokenA.address, tokenB.address, AMOUNT);
+  it("sub optimal swap", async () => {
+    console.log(tokenA.address, " A ");
+    console.log(tokenB.address, " B ");
+    await uniswapOptimal
+      .connect(signer)
+      .subOptimalZap(tokenA.address, tokenB.address, AMOUNT);
 
-  //     const after = await snapshot();
-  //     console.log("lp", after.lp.toString());
-  //     console.log("from", after.fromToken.toString());
-  //     console.log("to", after.toToken.toString());
-  //   });
+    const after = await snapshot();
+    console.log("lp", after.lp.toString());
+    console.log("from", after.fromToken.toString());
+    console.log("to", after.toToken.toString());
+  });
 });
